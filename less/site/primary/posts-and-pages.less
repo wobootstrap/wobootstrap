@@ -1,0 +1,260 @@
+.sticky {
+    display: block;
+}
+
+.hentry, .page-content {
+    position: relative;
+    padding-top: 35px;
+    border: 1px solid @gray-lighter;
+    margin-bottom: 70px;
+    .clearfix();
+
+    &.has-post-thumbnail,
+    &.has-post-video,
+    &.has-post-audio {
+        padding-top: 0;
+    }
+}
+
+.no-results {
+    .page-header {
+        padding: 35px 40px;
+        border: 1px solid @gray-lighter;
+        border-left: 5px solid @brand-success;
+        
+        .page-title {
+            text-transform: none;
+        }
+    }
+}
+
+.page-content {
+    padding: 45px;
+    margin-top: 70px;
+}
+
+.byline, .updated:not(.published) {
+    display: none;
+}
+
+.single .byline, .group-blog .byline {
+    display: inline;
+}
+
+.post-thumbnail, .post-video, .post-audio {
+    display: block;
+    margin: -1px;
+    margin-bottom: 35px;    
+}
+
+.entry-header {
+    padding: 0 45px;
+}
+
+.entry-content, .entry-summary {
+    margin: 1.5em 0 0;
+    padding: 0 45px 25px 45px;
+}
+
+.entry-footer {
+    border-top: 1px double @gray-lighter;
+    padding: 35px 0;
+    margin: 0 45px;
+}
+
+.page-links {
+    clear: both;
+    *margin: 0 0 1.5em;
+}
+
+.more-link {
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 1px solid @gray-lighter;
+    font-size: 80%;
+}
+
+.posted-on, .byline, .cat-links, .tags-links, .comments-link, .entry-format, .edit-link {
+    margin-right: 15px;
+
+    &:before {
+        font: normal 16px /1 'Genericons';
+        display: inline-block;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        vertical-align: middle;
+        margin-right: 2px;
+    }
+}
+
+.format-aside .entry-format:before {
+    content: "\f101";
+}
+
+.format-image .entry-format:before {
+    content: "\f473";
+}
+
+.format-video .entry-format:before {
+    content: "\f104";
+}
+
+.format-gallery .entry-format:before {
+    content: "\f103";
+}
+
+.format-quote .entry-format:before {
+    content: "\f106";
+}
+
+.format-link .entry-format:before {
+    content: "\f107";
+}
+
+.posted-on:before {
+    content: "\f307";
+}
+
+.byline:before {
+    content: "\f304";
+}
+
+.cat-links:before {
+    content: "\f301";
+}
+
+.tags-links:before {
+    content: "\f302";
+}
+
+.comments-link:before {
+    content: "\f300";
+}
+
+.edit-link:before {
+    content: "\f411";
+}
+
+
+.hentry-caroufredsel {
+    padding-top: 25px;
+    
+    &.format-aside,
+    &.format-image,
+    &.format-video,
+    &.format-gallery,
+    &.format-quote,
+    &.format-link {
+        padding-top: 0;
+    }
+    
+    &.format-aside {
+        .entry-title {
+            display: block;
+        }
+    }
+    
+    .post-thumbnail,
+    .post-gallery {
+        margin-bottom: 25px;
+    }
+
+    .entry-format {
+        position: relative;
+        margin-right: 0;
+        background-color: @gray-lighter;
+        margin-bottom: 25px;
+
+        &:before {
+            .hidden();
+        }
+
+        img {
+            .invisible();
+            .opacity(.3);
+        }
+        
+        .has-post-thumbnail& {
+            img {
+                visibility: visible;
+            }
+        }
+
+        a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%; /* be sure to set height & width */
+            width: 100%;
+            /* Hide the text. */
+            text-indent: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+
+            &:before {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                content: '\f101';
+                font: normal 16px / 1 'Genericons';
+                display: inline-block;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                margin-left: -25px;
+                margin-top: -25px;
+                background-color: @brand-success;
+                color: #fff;
+                text-align: center;
+                text-indent: 0;
+            }
+        }
+        
+        &:hover {
+            a:before {
+                background-color: @brand-primary;
+            }
+        }
+    }
+
+    .entry-header {
+        padding: 0 25px;
+    }
+
+    .entry-title {
+        font-size: 17px;
+    }
+
+    .entry-footer {
+        padding: 0 0 25px 0;
+        margin: 0 25px;
+        border-top: 0;
+    }
+
+    &.format-aside .entry-format a:before {
+        content: "\f101";
+    }
+
+    &.format-image .entry-format a:before {
+        content: "\f473";
+    }
+
+    &.format-video .entry-format a:before {
+        content: "\f104";
+    }
+
+    &.format-gallery .entry-format a:before {
+        content: "\f103";
+    }
+
+    &.format-quote .entry-format a:before {
+        content: "\f106";
+    }
+
+    &.format-link .entry-format a:before {
+        content: "\f107";
+    }
+}
+

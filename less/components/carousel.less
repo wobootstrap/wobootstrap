@@ -1,0 +1,36 @@
+// Left/right controls for nav
+// ---------------------------
+
+.carousel-control {
+    top: 50%;
+    bottom: auto;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    margin-top: -35px;
+    .opacity(1);
+    font-size: 28px;
+    color: @brand-primary;
+    text-shadow: none;
+    // We can't have this transition here because WebKit cancels the carousel
+    // animation if you trip this while in the middle of another animation.
+    background-color: #fff;    
+    text-align: center;
+    // Set gradients for backgrounds
+    &.left, &.right {
+        background-image: none;
+    }
+    // Hover/focus state
+    &:hover, &:focus {
+        color: @brand-success;
+    }
+}
+
+.carousel {
+    &:hover {
+        .carousel-control {
+            .opacity(1);
+        }
+    }
+}
+    

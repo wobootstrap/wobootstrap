@@ -1,0 +1,24 @@
+.search-form {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+
+    label {
+        position: relative;
+        display: table-cell;
+        z-index: 2;
+        width: 100%;
+        vertical-align: middle;
+
+        input[type="search"] {
+            width: calc(100% - 2px);
+        }
+    }
+
+    .search-submit {
+        position: relative;
+        display: table-cell;
+        z-index: 2;
+        float: left;
+    }
+}

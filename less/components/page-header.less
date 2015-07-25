@@ -1,0 +1,30 @@
+.page-header {
+    border-bottom: 1px solid @gray-lighter;
+    margin: 0;
+    padding: 37px 0;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+
+    .page-title {
+        margin: 10.5px 0;
+        font-size: 21px;
+        font-weight: 400;
+    }
+
+    @media (min-width: @grid-float-breakpoint) {
+        .container {
+            > div {
+                display: table;
+
+                > div {
+                    display: table-cell;
+                    vertical-align: middle;
+                    float: none;
+                }
+            }
+        }
+
+        .breadcrumbs {
+            text-align: right;
+        }
+    }
+}
