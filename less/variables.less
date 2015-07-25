@@ -1,6 +1,18 @@
-@import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic|Noto+Serif:400,700,400italic,700italic);
+// Basics of a navbar
+@navbar-height:                            95px;
 
-@font-family-sans-serif:   "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-family-serif:        "Noto Serif", Georgia, "Times New Roman", Times, serif;
+@navbar-default-color:                     @brand-primary;
+@navbar-default-bg:                        #fff;
+@navbar-default-border:                    @gray-lighter;
 
-@text-color:               @gray;
+// Navbar links
+@navbar-default-link-color:                @brand-primary;
+@navbar-default-link-hover-color:          @brand-success;
+@navbar-default-link-hover-bg:             transparent;
+@navbar-default-link-active-color:         @brand-success;
+@navbar-default-link-active-bg:            lighten(@gray-base, 98.5%);
+
+// Navbar toggle
+@navbar-default-toggle-hover-bg:           darken(@navbar-default-bg, 3%);
+@navbar-default-toggle-icon-bar-bg:        @brand-success;
+@navbar-default-toggle-border-color:       @gray-lighter;

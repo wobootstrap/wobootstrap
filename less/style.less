@@ -50,27 +50,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "bower_components/bootstrap/less/mixins.less";
 @import "bower_components/bootstrap/less/utilities.less";
 
-/*--------------------------------------------------------------
-# Elements
---------------------------------------------------------------*/
+@import "components/components.less";
+@import "site/site.less";
 @import "elements/elements.less";
 
-/*--------------------------------------------------------------
-# Components
---------------------------------------------------------------*/
-@import "components/components.less";
+.btn,
+.form-control, 
+input, {
+  border-width: 1px;
+}
 
-/*--------------------------------------------------------------
-# Site
---------------------------------------------------------------*/
-@import "site/site.less";
-
-/*--------------------------------------------------------------
-# Modules
---------------------------------------------------------------*/
-@import "modules/modules.less";
-
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-@import "media/media.less";
