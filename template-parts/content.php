@@ -6,6 +6,19 @@
      */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <?php
+        get_the_image( 
+            array( 
+                'size'         => 'saga-large', 
+                'min_width'    => 1100, 
+                'min_height'   => 500, 
+                'order'        => array( 'featured' ), 
+                'link_to_post' => is_singular() ? false : true, 
+                'before'       => '<div class="entry-media">', 
+                'after'        => '</div>' 
+            ) 
+        );
+    ?>
     <div class="entry-wrap">
         <?php if ( is_single( get_the_ID() ) ) : // If viewing a single post. ?>
         <header class="entry-header">
