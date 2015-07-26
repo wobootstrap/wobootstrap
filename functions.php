@@ -148,3 +148,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Load the WoBootstrap Core framework..
+ */
+require get_template_directory() . '/lib/wobootstrap.php';
