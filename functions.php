@@ -155,8 +155,3 @@ require get_template_directory() . '/inc/jetpack.php';
  * Load the WoBootstrap Core framework.
  */
 require get_template_directory() . '/lib/wobootstrap.php';
-
-/**
- * Load theme file
- */
-require get_template_directory() . '/lib/theme.php';
