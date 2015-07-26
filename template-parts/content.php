@@ -10,8 +10,6 @@
         get_the_image( 
             array( 
                 'size'         => 'full', 
-                'min_width'    => 1100, 
-                'min_height'   => 500, 
                 'order'        => array( 'featured' ), 
                 'link_to_post' => is_singular() ? false : true, 
                 'before'       => '<div class="entry-media">', 
