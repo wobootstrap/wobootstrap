@@ -7,20 +7,15 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="entry-wrap">
+        <?php if ( is_single( get_the_ID() ) ) : // If viewing a single post. ?>
         <header class="entry-header">
-            <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+            <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
         </header><!-- .entry-header -->
         <div class="entry-content">
-            <?php
-                the_content( sprintf(
-                    /* translators: %s: Name of current post. */
-                    wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'wobootstrap' ), array( 'span' => array( 'class' => array() ) ) ),
-                    the_title( '<span class="screen-reader-text">"', '"</span>', false )
-                ) );
-            ?>
+            <?php the_content(); ?>
             <?php
                 wp_link_pages( array(
-                    'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wobootstrap' ),
+                    'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_s' ),
                     'after'  => '</div>',
                 ) );
             ?>
@@ -28,5 +23,16 @@
         <footer class="entry-footer">
             <?php wobootstrap_entry_footer(); ?>
         </footer><!-- .entry-footer -->
+        <?php else : // If not viewing a single post. ?>
+        <header class="entry-header">
+            <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+        </header><!-- .entry-header -->
+        <div class="entry-summary">
+            <?php the_excerpt(); ?>
+        </div><!-- .entry-summary -->
+        <footer class="entry-footer">
+            <?php wobootstrap_entry_footer(); ?>
+        </footer><!-- .entry-footer -->
+        <?php endif; // End single post check. ?>
     </div>
 </article><!-- #post-## -->
