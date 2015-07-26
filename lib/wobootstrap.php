@@ -17,6 +17,11 @@
      */
     require_once( trailingslashit( WOBOOTSTRAP_CLASSES ) . 'wp_bootstrap_navwalker.php' );
 
+    /**
+     * /* Load the media grabber class.
+     */
+    require_once( trailingslashit( WOBOOTSTRAP_CLASSES ) . 'hybrid-media-grabber.php' );
+
     /* Load the Get the Image extension if supported. */
 	require_once( trailingslashit( WOBOOTSTRAP_EXTENSIONS ) . 'get-the-image.php' );
 ?>
