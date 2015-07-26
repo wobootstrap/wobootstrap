@@ -66,6 +66,7 @@ function wobootstrap_setup() {
 		'image',
         'audio',
 		'video',
+        'gallery',
 		'quote',
 		'link',
 	) );
