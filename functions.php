@@ -112,6 +112,8 @@ add_action( 'widgets_init', 'wobootstrap_widgets_init' );
  * Enqueue scripts and styles.
  */
 function wobootstrap_scripts() {
+    wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/css/bootstrap.css', array(), '3.3.5' );
+
 	wp_enqueue_style( 'wobootstrap-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'wobootstrap-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
