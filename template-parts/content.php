@@ -9,7 +9,7 @@
     <?php
         get_the_image( 
             array( 
-                'size'         => 'saga-large', 
+                'size'         => 'full', 
                 'min_width'    => 1100, 
                 'min_height'   => 500, 
                 'order'        => array( 'featured' ), 
