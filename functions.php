@@ -135,6 +135,11 @@ function wobootstrap_scripts() {
 add_action( 'wp_enqueue_scripts', 'wobootstrap_scripts' );
 
 /**
+ * Load the WoBootstrap Core framework.
+ */
+require get_template_directory() . '/lib/wobootstrap.php';
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
@@ -158,8 +163,3 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
-
-/**
- * Load the WoBootstrap Core framework.
- */
-require get_template_directory() . '/lib/wobootstrap.php';
